@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+
+<ion-header id="app-header" class="wdac-bg-primary" [translucent]="true">
+  <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
+    <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
+  </div>
+  <div id="app-billboard" class="wdac-bg-primary wdac-padding-top">
+    <div class="wdac-container wdac-padding-x wdac-flex wdac-flex-space-between">
+      <!--<a class="wdac-text-white cd-back-button">Go Back</a>-->
+      <a class="wdac-text-white cd-restart-button">Start Over</a>
+      <a class="wdac-text-white">Step 3 of 3</a>
+    </div>
+    <figure class="cd-avatar">
+      <img src="https://carddate.com/demo/media/avatar.jpg" alt="Charlotte" />
+    </figure>
+  </div>
+  <ion-grid class="margin-for-words">
+    <ion-row>
+      <div class="wdac-container">
+        <p class="wdac-text-center">Thank you, <strong class="showFirstName">{{lightUsersName}}</strong>! Lastly, CardDate needs your phone number to make sure you're a real person. Your phone number is <strong>never</strong> shared with me without your permission.</p>
+      </div>
+    </ion-row>
+    <ion-row class="wdac-container margin-top-form">
+      <form [formGroup]="phoneNumberForm">
+        <div class="wdac-flex">
+          <input type="tel" pattern="[0-9-]*" name="phoneNumber" formControlName="phoneNumber" class="wdac-input cd-margin-right"  placeholder="Phone (#s only)*" />
+
+          <button (click)="sendInitialMessageUi()" class="wdac-text-lowercase wdac-button">Start Chat</button>
+        </div>
+      </form>
+    </ion-row>
+  </ion-grid>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content id="app-content" class="content ion-padding" has-header="true" [fullscreen]="true" padding>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
+
+

@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+<ion-header id="app-header" class="wdac-bg-primary" [translucent]="true">
+  <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
+    <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
+  </div>
+  <div id="app-billboard" class="wdac-bg-primary wdac-padding-top">
+    <div class="wdac-container wdac-padding-x wdac-flex wdac-flex-space-between">
+      <!--<a class="wdac-text-white cd-back-button">Go Back</a>-->
+      <a class="wdac-text-white cd-restart-button">Start Over</a>
+      <a class="wdac-text-white">Step 2 of 3</a>
+    </div>
+    <figure class="cd-avatar">
+      <img src="../assets/who-is-david-kley-sm.jpg" alt="Dave Kley" />
+    </figure>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <div class=" wdac-container wdac-container-naked wdac-padding">
+        <p class="wdac-text-center">Hi, <strong class="showFirstName">{{lightUsersName}}</strong>! How did we meet?</p>
+      </div>
+    </ion-row>
+    <ion-row class="wdac-container">
+      <form [formGroup]="initialMessageForm" class="wdac-margin-bottom-none form-width">
+        <textarea type="input" name="message" class="wdac-input form-control" formControlName="initialMessage" placeholder="Please supply a short description to jog my memory."></textarea>
+
+        <div class="wdac-flex wdac-flex-row-reverse wdac-margin-top-small">
+          <button (click)="nextTab2(':cardId/tab3')" class="wdac-text-lowercase wdac-button">Continue</button>
+        </div>
+      </form>
+    </ion-row>
+  </ion-grid>
+
+
+
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
 </ion-content>

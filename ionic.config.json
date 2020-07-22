@@ -1,0 +1,7 @@
+{
+  "name": "conversation-starter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

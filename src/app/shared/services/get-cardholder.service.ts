@@ -10,9 +10,10 @@ export class GetCardholderService {
   userUrl = 'https://x38gylh92e.execute-api.us-east-2.amazonaws.com/dev/api/get-user-by-card-id';
   constructor(private http: HttpClient) { }
 
-  public getUserByCardId(cardId) {
-    console.log('users card id', `${cardId}`);
-    return this.http.get(`${this.userUrl}/${cardId}`, httpOptions);
+  // tslint:disable-next-line:variable-name
+  public getUserByCardId(card_id) {
+    console.log('users card id', `${card_id}`);
+    return this.http.get(`${this.userUrl}/${card_id}`, httpOptions);
 
   }
 }

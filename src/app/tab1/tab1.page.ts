@@ -16,7 +16,7 @@ export class Tab1Page implements OnInit {
   lightUsersName: any;
   nameForm: FormGroup;
   routeParams: Params;
-  cardId: any;
+  card_id: any;
   user;
   // user: User = new User();
 
@@ -35,9 +35,9 @@ export class Tab1Page implements OnInit {
   getUserByUrlParameter(){
     this.activatedRoute.params.subscribe( params => {
       console.log('the pathparams', params);
-      // tslint:disable-next-line:no-shadowed-variable
-      const cardId = params['cardId'];
-      this.userService.getUserByCardId(cardId)
+      // tslint:disable-next-line:no-shadowed-variable variable-name
+      const card_id = params['card_id'];
+      this.userService.getUserByCardId(card_id)
           .subscribe(user => this.user = user);
       console.log('user =', this.user);
     });

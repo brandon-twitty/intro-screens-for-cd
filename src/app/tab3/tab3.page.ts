@@ -46,7 +46,8 @@ export class Tab3Page implements OnInit {
           console.log('message sent ', data);
         });
   }
-  nextTab(tabRoute: string){
+
+  nextTab3(tabRoute: string){
     const navigationExtras: NavigationExtras = {
       state: {
         initialConvo: this.initialConvo,

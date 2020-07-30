@@ -1,0 +1,19 @@
+body.cd-sticky-background{
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe5f67), color-stop(50%, #fe5f67), color-stop(50%, #fe5f67), to(#fe5f67));
+  background: linear-gradient(#fe5f67, #fe5f67 50%, #fe5f67 50%, #fe5f67 100%);
+
+  transition: all .3s ease-in-out;
+}
+.cd-sticky-background {
+  background: #fe5f67;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe5f67), color-stop(50%, #fe5f67), color-stop(50%, #fff), to(#fff));
+  background: linear-gradient(#fe5f67, #fe5f67 50%, #fff 50%, #fff 100%);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}

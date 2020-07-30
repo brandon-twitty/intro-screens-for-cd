@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
+
+<ion-header id="app-header" class="wdac-bg-primary" [translucent]="true">
+  <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
+    <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
+  </div>
+  <div id="app-billboard" class="wdac-bg-primary wdac-padding-top">
+    <div class="wdac-container wdac-padding-x wdac-flex wdac-flex-space-between">
+      <!--<a class="wdac-text-white cd-back-button">Go Back</a>-->
+      <a class="wdac-text-white cd-restart-button">Start Over</a>
+      <a class="wdac-text-white">Step 4 of 4</a>
+    </div>
+    <figure class="cd-avatar">
+      <img src="https://carddate.com/demo/media/avatar.jpg" alt="Charlotte" />
+    </figure>
+  </div>
+  <ion-grid class="margin-for-words" >
+    <ion-row>
+      <div  class="step-frame wdac-container wdac-container-naked wdac-padding" >
+        <h1 class="wdac-text-center wdac-text-white" style="padding-top:150px;">The rest takes place in your text app.</h1>
+        <p class="wdac-text-center">We sent a text message to <span class="showPhoneNumber">3145889865</span>. Follow the brief instructions and the chat will start after Charlotte confirms you two have met.</p>
+        <p class="wdac-text-center"><a href="https://carddate.com/demo/#">I didn't get a text.</a></p>
+      </div>
+    </ion-row>
+  </ion-grid>
 </ion-header>
 
-<ion-content>
+<ion-content id="app-content" class="content ion-padding" has-header="true" [fullscreen]="true" padding>
 
 </ion-content>
+
+
